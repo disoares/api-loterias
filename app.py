@@ -30,11 +30,9 @@ def ok():
 
         soup = BeautifulSoup(site.content, 'html.parser')
 
-        print("passou aqui")
-        print(soup.find_all(class_="UHlKbe"))
-        print(soup)
+        print(soup.find_all(class_="MDTDab"))
 
-        for a in soup.find_all(class_="UHlKbe"):
+        for a in soup.find_all(class_="MDTDab"):
             dezenas.append(a.get_text())
 
         with open(j.replace(" ", "") + '.json', 'w') as arquivo:
