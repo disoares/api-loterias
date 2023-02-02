@@ -33,7 +33,7 @@ def ok():
         for a in soup.find_all(class_="UHlKbe"):
             dezenas.append(a.get_text())
 
-        with open('public/' + j.replace(" ", "") + '.json', 'w') as arquivo:
+        with open(j.replace(" ", "") + '.json', 'w') as arquivo:
             arquivo.write('{\n\t"dezenas": ' + json.dumps(dezenas) + '\n}')
 
     return jsonify({"status": "success", "dezenas": dezenas})
