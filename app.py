@@ -30,6 +30,8 @@ def ok():
 
         soup = BeautifulSoup(site.content, 'html.parser')
 
+        print(soup.find_all(class_="UHlKbe"))
+
         for a in soup.find_all(class_="UHlKbe"):
             dezenas.append(a.get_text())
 
